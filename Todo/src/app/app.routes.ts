@@ -1,7 +1,7 @@
-import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { TodosComponent } from './MyComponents/todos/todos.component';
 import { AboutComponent } from './MyComponents/about/about.component';
-import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
   { path: '', component: TodosComponent },
@@ -9,7 +9,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
